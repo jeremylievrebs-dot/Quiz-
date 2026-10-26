@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body style="text-align:center;font-family:sans-serif">
+  <img src="photo.jpg" width="250">
+  <h1>Wanna be my boyfriend?</h1>
+  <button id="yes">Yes 💖</button>
+  <button id="no" style="position:absolute">No</button>
+
+  <script>
+    const no = document.getElementById("no");
+    const yes = document.getElementById("yes");
+
+    const dodge = () => {
+      no.style.left = Math.random() * (innerWidth - 80) + "px";
+      no.style.top = Math.random() * (innerHeight - 40) + "px";
+    };
+    no.addEventListener("mouseenter", dodge);
+    no.addEventListener("touchstart", dodge);
+
+    yes.onclick = () => document.body.innerHTML = "<h1>I knew you'd say yes 💘</h1>";
+  </script>
+</body>
+</html>
